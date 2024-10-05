@@ -1,0 +1,48 @@
+{
+  "name": "java-template",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "init": true,
+  "features": {
+    "ghcr.io/devcontainers/features/java:latest": {
+      // Java バージョン, latest = SDKMAN が指定する最新の安定したバージョンのTemurin, jdkDistroは無視される
+      "version": "latest", 
+      "jdkDistro": "ms",
+      "installGradle": true,
+      "gradleVersion": "latest"
+    }
+  },
+  // SpringBoot使用の際は以下を追加
+  // "forwardPorts": ["8080:8080"],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        // null解析のモード
+        "java.compile.nullAnalysis.mode": "automatic",
+        // フォーマットスタイル 
+        "java.format.settings.profile": "GoogleStyle",
+        "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+        // Gradle拡張機能が用意する「gradle-wrapper.properties」ファイルからgradleを使用
+        "java.import.gradle.wrapper.enabled": false, 
+        // Java言語サーバーの起動に使用するJDKのフォルダ
+        "java.jdt.ls.java.home": "/usr/local/sdkman/candidates/java/current",
+        // Maven wrapperの使用を希望するかどうか
+        "maven.executable.preferMavenWrapper": false,
+        // テレメトリ
+        "redhat.telemetry.enabled": false,
+        "[java]": {
+          // Java フォーマッター
+          "editor.defaultFormatter": "redhat.java",
+          "editor.formatOnPaste": true,
+          "editor.formatOnSave": true
+        }
+      },
+      "extensions": [
+        // Java開発に必要な拡張機能
+        "vscjava.vscode-java-pack",
+        "vscjava.vscode-gradle"
+        // SpringBoot使用の際は以下を追加
+        // "vmware.vscode-boot-dev-pack"
+      ]
+    }
+  }
+}
