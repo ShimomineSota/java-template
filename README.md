@@ -30,4 +30,4 @@ devcontainer上でJava環境の構築に関する備忘録
 
 - `ghcr.io/devcontainers/features/java:latest`でビルドエラーが発生  
   `ghcr.io/devcontainers/features/java:1.5.0`に書き換えることで回避可能  
-  [ERROR: Feature "Java (via SDKMAN!)" (ghcr.io/devcontainers/features/java) failed to install!](ghcr.io/devcontainers/features/java:latest)  
+  [ERROR: Feature "Java (via SDKMAN!)" (ghcr.io/devcontainers/features/java) failed to install!](https://github.com/devcontainers-contrib/features/issues/642)  
