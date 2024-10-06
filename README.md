@@ -15,7 +15,6 @@ devcontainer上でJava環境の構築に関する備忘録
 - 公式イメージでは、git等の開発ツールはインストール済み  
 - 公式が準備しているイメージでは、MS製のJDKに限られるため、SDKMAN!経由でインストール
   [https://github.com/devcontainers/features/tree/main/src/java](https://github.com/devcontainers/features/tree/main/src/java)
-- SpringBoot使用の際は、コメントアウトを解除
 
 ## 参照情報
 
