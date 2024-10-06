@@ -11,8 +11,6 @@
       "gradleVersion": "latest"
     }
   },
-  // SpringBoot使用の際は以下を追加
-  // "forwardPorts": ["8080:8080"],
   "customizations": {
     "vscode": {
       "settings": {
@@ -40,8 +38,6 @@
         // Java開発に必要な拡張機能
         "vscjava.vscode-java-pack",
         "vscjava.vscode-gradle"
-        // SpringBoot使用の際は以下を追加
-        // "vmware.vscode-boot-dev-pack"
       ]
     }
   }
